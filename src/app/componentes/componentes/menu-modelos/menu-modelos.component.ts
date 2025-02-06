@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -22,12 +23,17 @@ throw new Error('Method not implemented.');
 }
   nombreUsuario: string = '';
   modelos$!: Observable<any[]>; // Variable para almacenar la lista de modelos
-verEn3d: any;
+
 
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private modelo3dService: Modelo3dService // Inyectamos el servicio
   ) {}
+
+  verEn3d(id: number) {
+    this.router.navigate([`/welcome/visor-3d`, id]);
+  }
 
   ngOnInit(): void {
     // Suscribirse a los queryParams para obtener el nombre del usuario

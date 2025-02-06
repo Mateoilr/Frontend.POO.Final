@@ -21,4 +21,9 @@ export class Modelo3dService {
   updateModelo(id: string, data: any): Observable<any> {
     return this.http.put(`${this.apiUrl}/${id}`, data);
   }
-}
+  
+    obtenerModelos(): Observable<{ id: number; url: string }[]> {
+      return this.http.get<{ id: number; url: string }[]>(this.apiUrl);
+    }
+  }
+

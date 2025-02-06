@@ -9,6 +9,7 @@
             <li *ngFor="let modelo of modelos" class="model-item">
                 <nz-card [nzTitle]="modelo.nombre" [nzBordered]="false" class="model-card">
                     <div class="model-actions">
+
                         <button nz-button nzType="primary" (click)="verEn3d(modelo.id)">Ver en 3D</button>
                     </div>
                 </nz-card>

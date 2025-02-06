@@ -1,0 +1,9 @@
+.model-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+button {
+    width: 100%;
+}

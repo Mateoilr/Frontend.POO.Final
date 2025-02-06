@@ -24,6 +24,8 @@
     "@ctrl/tinycolor": "^4.1.0",
     "@ionic/angular": "^8.4.3",
     "@ionic/storage-angular": "^4.0.0",
+    "babylonjs": "^7.48.0",
+    "babylonjs-loaders": "^7.48.0",
     "express": "^4.18.2",
     "ng-zorro-antd": "^17.4.1",
     "rxjs": "~7.8.0",
