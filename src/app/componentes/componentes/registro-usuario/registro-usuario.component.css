@@ -1,0 +1,74 @@
+/* Asegura que el body ocupe toda la pantalla y use flexbox */
+.body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh; /* Ocupa toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e29755; /* Fondo gris claro */
+}
+
+/* Contenedor que centra la tarjeta */
+.container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/* Tarjeta (nz-card) más compacta */
+nz-card {
+    max-width: 1000px; /* Aumenta el ancho */
+    width: 100%; /* Se adapta mejor a la pantalla */
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo del título de la tarjeta */
+:host ::ng-deep .ant-card-head-title {
+    font-size: 22px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+}
+
+:host ::ng-deep .ant-form-item-required {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+}
+
+
+
+/* Estilos del input */
+nz-form-control input {
+    font-size: 16px !important;
+    padding: 10px !important;
+    border-radius: 6px !important;
+    border: 1px solid #bbb !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Estilo del botón */
+button[nz-button] {
+    font-size: 18px;
+    padding: 12px;
+    width: 100%;
+    background-color: #e85252;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button[nz-button]:hover {
+    background-color: #f97e04;
+    transform: scale(1.05);
+}

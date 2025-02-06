@@ -1,0 +1,121 @@
+/* Asegura que el body ocupe toda la pantalla y use flexbox */
+.body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh; /* Ocupa toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#e29755; /* Fondo más moderno */
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrar texto */
+}
+
+/* Mensaje de bienvenida */
+.welcome-message {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 600px; /* Para que no se extienda demasiado */
+}
+
+/* Contenedor de la lista de modelos */
+.model-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 100%;
+}
+
+/* Lista de modelos */
+.model-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+}
+
+/* Ítems individuales */
+.model-item {
+    width: 270px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.model-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Tarjetas */
+.model-card {
+    width: 100%;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón */
+.model-actions {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.model-actions button {
+    width: 100%;
+    background: linear-gradient(135deg, #e85252, #ec6464);
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.model-actions button:hover {
+    background: linear-gradient(135deg, #e85252, #e77a7a);
+    transform: scale(1.05);
+}
+
+/* Spinner */
+.nz-spin {
+    display: block;
+    margin: 50px auto;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .model-item {
+        width: 90%;
+    }
+}

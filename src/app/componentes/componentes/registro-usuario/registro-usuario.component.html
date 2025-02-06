@@ -1,0 +1,17 @@
+
+<div class="body">
+    
+    <nz-card nzTitle="¡Bienvenido para poder iniciar necesitamos que te registres!" [nzBordered]="false" [nzHoverable]="true">
+    <form nz-form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+      <nz-form-item>
+        <nz-form-label nzFor="nombre" nzRequired>Nombre</nz-form-label>
+        <nz-form-control>
+          <input nz-input formControlName="nombre" id="nombre" placeholder="Ingresa tu nombre" />
+        </nz-form-control>
+      </nz-form-item>
+  
+      <button nz-button nzType="primary" [disabled]="registroForm.invalid">Registrar</button>
+    </form>
+  </nz-card>
+
+  </div>

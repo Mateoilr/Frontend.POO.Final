@@ -1,0 +1,22 @@
+<div class="container, body" >
+    <h2 class="welcome-message">
+        ¡Bienvenido, {{ nombreUsuario }}!   
+        A continuación te presentamos las letras del abecedario en lenguaje de Señas
+    </h2>
+
+    <div class="model-list-container" *ngIf="modelos$ | async as modelos; else loading">
+        <ul class="model-list">
+            <li *ngFor="let modelo of modelos" class="model-item">
+                <nz-card [nzTitle]="modelo.nombre" [nzBordered]="false" class="model-card">
+                    <div class="model-actions">
+                        <button nz-button nzType="primary" (click)="verEn3d(modelo.id)">Ver en 3D</button>
+                    </div>
+                </nz-card>
+            </li>
+        </ul>
+    </div>
+
+    <ng-template #loading>
+        <nz-spin nzSimple></nz-spin>
+    </ng-template>
+</div>
